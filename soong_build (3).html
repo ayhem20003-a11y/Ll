@@ -1,0 +1,428 @@
+
+<html>
+<head>
+<title>Build Docs</title>
+<style>
+#main {
+  padding: 48px;
+}
+
+table{
+  table-layout: fixed;
+}
+
+td {
+  word-wrap:break-word;
+}
+
+ 
+td,td code {
+    color: #202124
+}
+
+th,th code {
+    color: #fff;
+    font: 500 16px/24px Roboto,sans-serif
+}
+
+td,table.responsive tr:not(.alt) td td:first-child,table.responsive td tr:not(.alt) td:first-child {
+    background: rgba(255,255,255,.95);
+    vertical-align: top
+}
+
+td,td code {
+    padding: 7px 8px 8px
+}
+
+tr {
+    border: 0;
+    background: #78909c;
+    border-top: 1px solid #cfd8dc
+}
+
+th,td {
+    border: 0;
+    margin: 0;
+    text-align: left
+}
+
+th {
+    height: 48px;
+    padding: 8px;
+    vertical-align: middle
+}
+
+table {
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: 14px/20px Roboto,sans-serif;
+    margin: 16px 0;
+    width: 100%
+}
+
+h1 {
+    color: #80868b;
+    font: 300 34px/40px Roboto,sans-serif;
+    letter-spacing: -0.01em;
+    margin: 40px 0 20px
+}
+
+h1,h2,h3,h4,h5,h6 {
+    overflow: hidden;
+    padding: 0;
+    text-overflow: ellipsis
+}
+
+:link,:visited {
+    color: #039be5;
+    outline: 0;
+    text-decoration: none
+}
+
+body,html {
+    color: #202124;
+    font: 400 16px/24px Roboto,sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    height: 100%;
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*,*::before,*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit
+}
+
+body,div,dl,dd,form,img,input,figure,menu {
+    margin: 0;
+    padding: 0
+}
+</style>
+
+<script type="text/javascript">
+window.addEventListener('message', (e) => {
+  if (e != null && e.data != null && e.data.type === "SET_BASE" && e.data.base != null) {
+    const existingBase = document.querySelector('base');
+    if (existingBase != null) {
+      existingBase.parentElement.removeChild(existingBase);
+    }
+
+    const base = document.createElement('base');
+    base.setAttribute('href', e.data.base);
+    document.head.appendChild(base);
+  }
+});
+</script>
+
+</head>
+<body>
+<div id="main">
+<H1>Soong Modules Reference</H1>
+The latest versions of Android use the Soong build system, which greatly simplifies build
+configuration over the previous Make-based system. This site contains the generated reference
+files for the Soong build system.
+
+<table class="module_types" summary="Table of Soong module types sorted by package">
+  <thead>
+    <tr>
+      <th style="width:20%">Package</th>
+      <th style="width:80%">Module types</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+      <tr>
+        <td>android/soong/aconfig</td>
+        <td>
+        <a href="aconfig.html#aconfig_declarations">aconfig_declarations</a>, <a href="aconfig.html#aconfig_value_set">aconfig_value_set</a>, <a href="aconfig.html#aconfig_values">aconfig_values</a>, <a href="aconfig.html#all_aconfig_declarations">all_aconfig_declarations</a>, <a href="aconfig.html#all_aconfig_declarations_extension">all_aconfig_declarations_extension</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/aconfig/build_flags</td>
+        <td>
+        <a href="build_flags.html#build_flag_declarations">build_flag_declarations</a>, <a href="build_flags.html#build_flags_json">build_flags_json</a>, <a href="build_flags.html#release_config_contributions">release_config_contributions</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/aconfig/codegen</td>
+        <td>
+        <a href="codegen.html#aconfig_declarations_group">aconfig_declarations_group</a>, <a href="codegen.html#cc_aconfig_library">cc_aconfig_library</a>, <a href="codegen.html#java_aconfig_library">java_aconfig_library</a>, <a href="codegen.html#rust_aconfig_library">rust_aconfig_library</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/aidl</td>
+        <td>
+        <a href="aidl.html#aidl_interface">aidl_interface</a>, <a href="aidl.html#aidl_interface_defaults">aidl_interface_defaults</a>, <a href="aidl.html#aidl_interfaces_metadata">aidl_interfaces_metadata</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/aidl_library</td>
+        <td>
+        <a href="aidl_library.html#aidl_library">aidl_library</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/android</td>
+        <td>
+        <a href="android.html#all_apex_contributions">all_apex_contributions</a>, <a href="android.html#android_info">android_info</a>, <a href="android.html#apex_contributions">apex_contributions</a>, <a href="android.html#apex_contributions_defaults">apex_contributions_defaults</a>, <a href="android.html#build_prop">build_prop</a>, <a href="android.html#csuite_config">csuite_config</a>, <a href="android.html#dirgroup">dirgroup</a>, <a href="android.html#filegroup">filegroup</a>, <a href="android.html#filegroup_defaults">filegroup_defaults</a>, <a href="android.html#gen_notice">gen_notice</a>, <a href="android.html#license">license</a>, <a href="android.html#license_kind">license_kind</a>, <a href="android.html#otatools_package_cert_files">otatools_package_cert_files</a>, <a href="android.html#package">package</a>, <a href="android.html#prebuilt_build_tool">prebuilt_build_tool</a>, <a href="android.html#product_config">product_config</a>, <a href="android.html#recovery_build_prop">recovery_build_prop</a>, <a href="android.html#removed_package">removed_package</a>, <a href="android.html#soong_config_bool_variable">soong_config_bool_variable</a>, <a href="android.html#soong_config_module_type">soong_config_module_type</a>, <a href="android.html#soong_config_module_type_import">soong_config_module_type_import</a>, <a href="android.html#soong_config_string_variable">soong_config_string_variable</a>, <a href="android.html#soong_config_value_variable">soong_config_value_variable</a>, <a href="android.html#soong_namespace">soong_namespace</a>, <a href="android.html#team">team</a>, <a href="android.html#vintf_data">vintf_data</a>, <a href="android.html#vintf_fragment">vintf_fragment</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/android_sdk</td>
+        <td>
+        <a href="android_sdk.html#android_sdk_repo_host">android_sdk_repo_host</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/apex</td>
+        <td>
+        <a href="apex.html#all_apex_certs">all_apex_certs</a>, <a href="apex.html#apex">apex</a>, <a href="apex.html#apex_defaults">apex_defaults</a>, <a href="apex.html#apex_key">apex_key</a>, <a href="apex.html#apex_set">apex_set</a>, <a href="apex.html#apex_test">apex_test</a>, <a href="apex.html#apex_vndk">apex_vndk</a>, <a href="apex.html#override_apex">override_apex</a>, <a href="apex.html#prebuilt_apex">prebuilt_apex</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/art</td>
+        <td>
+        <a href="art.html#art_cc_binary">art_cc_binary</a>, <a href="art.html#art_cc_defaults">art_cc_defaults</a>, <a href="art.html#art_cc_library">art_cc_library</a>, <a href="art.html#art_cc_library_static">art_cc_library_static</a>, <a href="art.html#art_cc_test">art_cc_test</a>, <a href="art.html#art_cc_test_library">art_cc_test_library</a>, <a href="art.html#art_global_defaults">art_global_defaults</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/bpf</td>
+        <td>
+        <a href="bpf.html#bpf">bpf</a>, <a href="bpf.html#bpf_defaults">bpf_defaults</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/bpf/libbpf</td>
+        <td>
+        <a href="libbpf_prog.html#libbpf_defaults">libbpf_defaults</a>, <a href="libbpf_prog.html#libbpf_prog">libbpf_prog</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/cc</td>
+        <td>
+        <a href="cc.html#cc_benchmark">cc_benchmark</a>, <a href="cc.html#cc_benchmark_host">cc_benchmark_host</a>, <a href="cc.html#cc_binary">cc_binary</a>, <a href="cc.html#cc_binary_host">cc_binary_host</a>, <a href="cc.html#cc_cmake_snapshot">cc_cmake_snapshot</a>, <a href="cc.html#cc_defaults">cc_defaults</a>, <a href="cc.html#cc_fuzz">cc_fuzz</a>, <a href="cc.html#cc_genrule">cc_genrule</a>, <a href="cc.html#cc_library">cc_library</a>, <a href="cc.html#cc_library_headers">cc_library_headers</a>, <a href="cc.html#cc_library_host_shared">cc_library_host_shared</a>, <a href="cc.html#cc_library_host_static">cc_library_host_static</a>, <a href="cc.html#cc_library_shared">cc_library_shared</a>, <a href="cc.html#cc_library_static">cc_library_static</a>, <a href="cc.html#cc_object">cc_object</a>, <a href="cc.html#cc_prebuilt_binary">cc_prebuilt_binary</a>, <a href="cc.html#cc_prebuilt_library">cc_prebuilt_library</a>, <a href="cc.html#cc_prebuilt_library_headers">cc_prebuilt_library_headers</a>, <a href="cc.html#cc_prebuilt_library_shared">cc_prebuilt_library_shared</a>, <a href="cc.html#cc_prebuilt_library_static">cc_prebuilt_library_static</a>, <a href="cc.html#cc_prebuilt_object">cc_prebuilt_object</a>, <a href="cc.html#cc_prebuilt_test_library_shared">cc_prebuilt_test_library_shared</a>, <a href="cc.html#cc_preprocess_no_configuration">cc_preprocess_no_configuration</a>, <a href="cc.html#cc_rustlibs_for_make">cc_rustlibs_for_make</a>, <a href="cc.html#cc_test">cc_test</a>, <a href="cc.html#cc_test_host">cc_test_host</a>, <a href="cc.html#cc_test_library">cc_test_library</a>, <a href="cc.html#fdo_profile">fdo_profile</a>, <a href="cc.html#kernel_headers">kernel_headers</a>, <a href="cc.html#llndk_libraries_txt">llndk_libraries_txt</a>, <a href="cc.html#ndk_headers">ndk_headers</a>, <a href="cc.html#ndk_library">ndk_library</a>, <a href="cc.html#preprocessed_ndk_headers">preprocessed_ndk_headers</a>, <a href="cc.html#sanitizer_libraries_txt">sanitizer_libraries_txt</a>, <a href="cc.html#vndk_prebuilt_shared">vndk_prebuilt_shared</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/ci_tests</td>
+        <td>
+        <a href="ci_tests.html#test_package">test_package</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/compliance</td>
+        <td>
+        <a href="compliance.html#notice_xml">notice_xml</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/csuite</td>
+        <td>
+        <a href="csuite.html#csuite_test">csuite_test</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/etc</td>
+        <td>
+        <a href="etc.html#adb_keys">adb_keys</a>, <a href="etc.html#avbpubkey">avbpubkey</a>, <a href="etc.html#install_symlink">install_symlink</a>, <a href="etc.html#install_symlink_host">install_symlink_host</a>, <a href="etc.html#otacerts_zip">otacerts_zip</a>, <a href="etc.html#prebuilt_any">prebuilt_any</a>, <a href="etc.html#prebuilt_avb">prebuilt_avb</a>, <a href="etc.html#prebuilt_bin">prebuilt_bin</a>, <a href="etc.html#prebuilt_bt_firmware">prebuilt_bt_firmware</a>, <a href="etc.html#prebuilt_defaults">prebuilt_defaults</a>, <a href="etc.html#prebuilt_dsp">prebuilt_dsp</a>, <a href="etc.html#prebuilt_etc">prebuilt_etc</a>, <a href="etc.html#prebuilt_etc_cacerts">prebuilt_etc_cacerts</a>, <a href="etc.html#prebuilt_etc_host">prebuilt_etc_host</a>, <a href="etc.html#prebuilt_firmware">prebuilt_firmware</a>, <a href="etc.html#prebuilt_first_stage_ramdisk">prebuilt_first_stage_ramdisk</a>, <a href="etc.html#prebuilt_font">prebuilt_font</a>, <a href="etc.html#prebuilt_framework">prebuilt_framework</a>, <a href="etc.html#prebuilt_gpu">prebuilt_gpu</a>, <a href="etc.html#prebuilt_lib">prebuilt_lib</a>, <a href="etc.html#prebuilt_media">prebuilt_media</a>, <a href="etc.html#prebuilt_odm">prebuilt_odm</a>, <a href="etc.html#prebuilt_optee">prebuilt_optee</a>, <a href="etc.html#prebuilt_overlay">prebuilt_overlay</a>, <a href="etc.html#prebuilt_priv_app">prebuilt_priv_app</a>, <a href="etc.html#prebuilt_radio">prebuilt_radio</a>, <a href="etc.html#prebuilt_renderscript_bitcode">prebuilt_renderscript_bitcode</a>, <a href="etc.html#prebuilt_res">prebuilt_res</a>, <a href="etc.html#prebuilt_rfs">prebuilt_rfs</a>, <a href="etc.html#prebuilt_rfsa">prebuilt_rfsa</a>, <a href="etc.html#prebuilt_root">prebuilt_root</a>, <a href="etc.html#prebuilt_root_host">prebuilt_root_host</a>, <a href="etc.html#prebuilt_sbin">prebuilt_sbin</a>, <a href="etc.html#prebuilt_system">prebuilt_system</a>, <a href="etc.html#prebuilt_tee">prebuilt_tee</a>, <a href="etc.html#prebuilt_tvconfig">prebuilt_tvconfig</a>, <a href="etc.html#prebuilt_tvservice">prebuilt_tvservice</a>, <a href="etc.html#prebuilt_usr_hyphendata">prebuilt_usr_hyphendata</a>, <a href="etc.html#prebuilt_usr_idc">prebuilt_usr_idc</a>, <a href="etc.html#prebuilt_usr_keychars">prebuilt_usr_keychars</a>, <a href="etc.html#prebuilt_usr_keylayout">prebuilt_usr_keylayout</a>, <a href="etc.html#prebuilt_usr_odml">prebuilt_usr_odml</a>, <a href="etc.html#prebuilt_usr_share">prebuilt_usr_share</a>, <a href="etc.html#prebuilt_usr_share_host">prebuilt_usr_share_host</a>, <a href="etc.html#prebuilt_usr_srec">prebuilt_usr_srec</a>, <a href="etc.html#prebuilt_vendor">prebuilt_vendor</a>, <a href="etc.html#prebuilt_vendor_dlkm">prebuilt_vendor_dlkm</a>, <a href="etc.html#prebuilt_vendor_overlay">prebuilt_vendor_overlay</a>, <a href="etc.html#prebuilt_voicepack">prebuilt_voicepack</a>, <a href="etc.html#prebuilt_wallpaper">prebuilt_wallpaper</a>, <a href="etc.html#prebuilt_wlc_upt">prebuilt_wlc_upt</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/external/clang</td>
+        <td>
+        <a href="clang.html#clang_binary_host">clang_binary_host</a>, <a href="clang.html#clang_tblgen">clang_tblgen</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/external/llvm</td>
+        <td>
+        <a href="llvm.html#force_build_llvm_components_defaults">force_build_llvm_components_defaults</a>, <a href="llvm.html#llvm_defaults">llvm_defaults</a>, <a href="llvm.html#llvm_tblgen">llvm_tblgen</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/filesystem</td>
+        <td>
+        <a href="filesystem.html#android_filesystem">android_filesystem</a>, <a href="filesystem.html#android_filesystem_defaults">android_filesystem_defaults</a>, <a href="filesystem.html#android_system_image">android_system_image</a>, <a href="filesystem.html#avb_add_hash_footer">avb_add_hash_footer</a>, <a href="filesystem.html#avb_add_hash_footer_defaults">avb_add_hash_footer_defaults</a>, <a href="filesystem.html#avb_gen_vbmeta_image">avb_gen_vbmeta_image</a>, <a href="filesystem.html#avb_gen_vbmeta_image_defaults">avb_gen_vbmeta_image_defaults</a>, <a href="filesystem.html#bootconfig">bootconfig</a>, <a href="filesystem.html#bootimg">bootimg</a>, <a href="filesystem.html#logical_partition">logical_partition</a>, <a href="filesystem.html#raw_binary">raw_binary</a>, <a href="filesystem.html#super_image">super_image</a>, <a href="filesystem.html#vbmeta">vbmeta</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/fs_config</td>
+        <td>
+        <a href="fs_config.html#target_fs_config_gen_filegroup">target_fs_config_gen_filegroup</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/fsgen</td>
+        <td>
+        <a href="fsgen.html#soong_filesystem_creator">soong_filesystem_creator</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/genrule</td>
+        <td>
+        <a href="genrule.html#genrule">genrule</a>, <a href="genrule.html#genrule_defaults">genrule_defaults</a>, <a href="genrule.html#gensrcs">gensrcs</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/golang</td>
+        <td>
+        <a href="golang.html#blueprint_go_binary">blueprint_go_binary</a>, <a href="golang.html#bootstrap_go_package">bootstrap_go_package</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/hidl</td>
+        <td>
+        <a href="hidl.html#hidl_interface">hidl_interface</a>, <a href="hidl.html#hidl_interfaces_metadata">hidl_interfaces_metadata</a>, <a href="hidl.html#hidl_package_root">hidl_package_root</a>, <a href="hidl.html#prebuilt_hidl_interfaces">prebuilt_hidl_interfaces</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/java</td>
+        <td>
+        <a href="java.html#android_app">android_app</a>, <a href="java.html#android_app_certificate">android_app_certificate</a>, <a href="java.html#android_app_import">android_app_import</a>, <a href="java.html#android_app_set">android_app_set</a>, <a href="java.html#android_library">android_library</a>, <a href="java.html#android_library_import">android_library_import</a>, <a href="java.html#android_ravenwood_libgroup">android_ravenwood_libgroup</a>, <a href="java.html#android_ravenwood_test">android_ravenwood_test</a>, <a href="java.html#android_robolectric_runtimes">android_robolectric_runtimes</a>, <a href="java.html#android_robolectric_test">android_robolectric_test</a>, <a href="java.html#android_test">android_test</a>, <a href="java.html#android_test_helper_app">android_test_helper_app</a>, <a href="java.html#android_test_import">android_test_import</a>, <a href="java.html#art_boot_images">art_boot_images</a>, <a href="java.html#autogen_runtime_resource_overlay">autogen_runtime_resource_overlay</a>, <a href="java.html#bootclasspath_fragment">bootclasspath_fragment</a>, <a href="java.html#bootclasspath_fragment_test">bootclasspath_fragment_test</a>, <a href="java.html#dex_bootjars">dex_bootjars</a>, <a href="java.html#dex_import">dex_import</a>, <a href="java.html#dexpreopt_systemserver_check">dexpreopt_systemserver_check</a>, <a href="java.html#doc_defaults">doc_defaults</a>, <a href="java.html#droiddoc">droiddoc</a>, <a href="java.html#droiddoc_exported_dir">droiddoc_exported_dir</a>, <a href="java.html#droiddoc_host">droiddoc_host</a>, <a href="java.html#droidstubs">droidstubs</a>, <a href="java.html#droidstubs_host">droidstubs_host</a>, <a href="java.html#global_compat_config">global_compat_config</a>, <a href="java.html#java_api_contribution">java_api_contribution</a>, <a href="java.html#java_api_contribution_import">java_api_contribution_import</a>, <a href="java.html#java_api_library">java_api_library</a>, <a href="java.html#java_binary">java_binary</a>, <a href="java.html#java_binary_host">java_binary_host</a>, <a href="java.html#java_defaults">java_defaults</a>, <a href="java.html#java_device_for_host">java_device_for_host</a>, <a href="java.html#java_fuzz">java_fuzz</a>, <a href="java.html#java_genrule">java_genrule</a>, <a href="java.html#java_genrule_combiner">java_genrule_combiner</a>, <a href="java.html#java_genrule_host">java_genrule_host</a>, <a href="java.html#java_host_for_device">java_host_for_device</a>, <a href="java.html#java_import">java_import</a>, <a href="java.html#java_import_host">java_import_host</a>, <a href="java.html#java_library">java_library</a>, <a href="java.html#java_library_host">java_library_host</a>, <a href="java.html#java_library_static">java_library_static</a>, <a href="java.html#java_plugin">java_plugin</a>, <a href="java.html#java_sdk_library">java_sdk_library</a>, <a href="java.html#java_sdk_library_import">java_sdk_library_import</a>, <a href="java.html#java_system_modules">java_system_modules</a>, <a href="java.html#java_system_modules_import">java_system_modules_import</a>, <a href="java.html#java_test">java_test</a>, <a href="java.html#java_test_helper_library">java_test_helper_library</a>, <a href="java.html#java_test_host">java_test_host</a>, <a href="java.html#java_test_import">java_test_import</a>, <a href="java.html#javadoc">javadoc</a>, <a href="java.html#javadoc_host">javadoc_host</a>, <a href="java.html#kotlin_plugin">kotlin_plugin</a>, <a href="java.html#override_android_app">override_android_app</a>, <a href="java.html#override_android_test">override_android_test</a>, <a href="java.html#override_runtime_resource_overlay">override_runtime_resource_overlay</a>, <a href="java.html#platform_bootclasspath">platform_bootclasspath</a>, <a href="java.html#platform_compat_config">platform_compat_config</a>, <a href="java.html#platform_systemserverclasspath">platform_systemserverclasspath</a>, <a href="java.html#prebuilt_apis">prebuilt_apis</a>, <a href="java.html#prebuilt_bootclasspath_fragment">prebuilt_bootclasspath_fragment</a>, <a href="java.html#prebuilt_platform_compat_config">prebuilt_platform_compat_config</a>, <a href="java.html#prebuilt_stubs_sources">prebuilt_stubs_sources</a>, <a href="java.html#prebuilt_systemserverclasspath_fragment">prebuilt_systemserverclasspath_fragment</a>, <a href="java.html#runtime_resource_overlay">runtime_resource_overlay</a>, <a href="java.html#stubs_defaults">stubs_defaults</a>, <a href="java.html#systemserverclasspath_fragment">systemserverclasspath_fragment</a>, <a href="java.html#tradefed_java_library_host">tradefed_java_library_host</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/kernel</td>
+        <td>
+        <a href="kernel.html#prebuilt_kernel_modules">prebuilt_kernel_modules</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/linkerconfig</td>
+        <td>
+        <a href="linkerconfig.html#linker_config">linker_config</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/phony</td>
+        <td>
+        <a href="phony.html#phony">phony</a>, <a href="phony.html#phony_rule">phony_rule</a>, <a href="phony.html#phony_rule_defaults">phony_rule_defaults</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/prebuilts/clang/host/linux-x86/clangprebuilts</td>
+        <td>
+        <a href="clangprebuilts.html#clang_builtin_headers">clang_builtin_headers</a>, <a href="clangprebuilts.html#libclang_rt_prebuilt_library_shared">libclang_rt_prebuilt_library_shared</a>, <a href="clangprebuilts.html#libclang_rt_prebuilt_library_static">libclang_rt_prebuilt_library_static</a>, <a href="clangprebuilts.html#libclang_rt_prebuilt_object">libclang_rt_prebuilt_object</a>, <a href="clangprebuilts.html#llvm_darwin_filegroup">llvm_darwin_filegroup</a>, <a href="clangprebuilts.html#llvm_host_defaults">llvm_host_defaults</a>, <a href="clangprebuilts.html#llvm_prebuilt_build_tool">llvm_prebuilt_build_tool</a>, <a href="clangprebuilts.html#llvm_prebuilt_library_shared">llvm_prebuilt_library_shared</a>, <a href="clangprebuilts.html#llvm_prebuilt_library_static">llvm_prebuilt_library_static</a>, <a href="clangprebuilts.html#llvm_tools_filegroup">llvm_tools_filegroup</a>, <a href="clangprebuilts.html#ndk_prebuilt_shared_stl">ndk_prebuilt_shared_stl</a>, <a href="clangprebuilts.html#ndk_prebuilt_static_stl">ndk_prebuilt_static_stl</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/prebuilts/rust/rustprebuilts</td>
+        <td>
+        <a href="rustprebuilts.html#rust_stdlib_prebuilt_filegroup_host">rust_stdlib_prebuilt_filegroup_host</a>, <a href="rustprebuilts.html#rust_stdlib_prebuilt_host">rust_stdlib_prebuilt_host</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/python</td>
+        <td>
+        <a href="python.html#python_binary_host">python_binary_host</a>, <a href="python.html#python_defaults">python_defaults</a>, <a href="python.html#python_library">python_library</a>, <a href="python.html#python_library_host">python_library_host</a>, <a href="python.html#python_test">python_test</a>, <a href="python.html#python_test_host">python_test_host</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/rust</td>
+        <td>
+        <a href="rust.html#rust_benchmark">rust_benchmark</a>, <a href="rust.html#rust_benchmark_host">rust_benchmark_host</a>, <a href="rust.html#rust_binary">rust_binary</a>, <a href="rust.html#rust_binary_host">rust_binary_host</a>, <a href="rust.html#rust_bindgen">rust_bindgen</a>, <a href="rust.html#rust_bindgen_host">rust_bindgen_host</a>, <a href="rust.html#rust_defaults">rust_defaults</a>, <a href="rust.html#rust_ffi">rust_ffi</a>, <a href="rust.html#rust_ffi_host">rust_ffi_host</a>, <a href="rust.html#rust_ffi_host_shared">rust_ffi_host_shared</a>, <a href="rust.html#rust_ffi_host_static">rust_ffi_host_static</a>, <a href="rust.html#rust_ffi_shared">rust_ffi_shared</a>, <a href="rust.html#rust_ffi_static">rust_ffi_static</a>, <a href="rust.html#rust_fuzz">rust_fuzz</a>, <a href="rust.html#rust_fuzz_host">rust_fuzz_host</a>, <a href="rust.html#rust_library">rust_library</a>, <a href="rust.html#rust_library_dylib">rust_library_dylib</a>, <a href="rust.html#rust_library_host">rust_library_host</a>, <a href="rust.html#rust_library_host_dylib">rust_library_host_dylib</a>, <a href="rust.html#rust_library_host_rlib">rust_library_host_rlib</a>, <a href="rust.html#rust_library_rlib">rust_library_rlib</a>, <a href="rust.html#rust_prebuilt_dylib">rust_prebuilt_dylib</a>, <a href="rust.html#rust_prebuilt_library">rust_prebuilt_library</a>, <a href="rust.html#rust_prebuilt_proc_macro">rust_prebuilt_proc_macro</a>, <a href="rust.html#rust_prebuilt_rlib">rust_prebuilt_rlib</a>, <a href="rust.html#rust_proc_macro">rust_proc_macro</a>, <a href="rust.html#rust_protobuf">rust_protobuf</a>, <a href="rust.html#rust_protobuf_host">rust_protobuf_host</a>, <a href="rust.html#rust_test">rust_test</a>, <a href="rust.html#rust_test_host">rust_test_host</a>, <a href="rust.html#rust_toolchain_library">rust_toolchain_library</a>, <a href="rust.html#rust_toolchain_library_dylib">rust_toolchain_library_dylib</a>, <a href="rust.html#rust_toolchain_library_rlib">rust_toolchain_library_rlib</a>, <a href="rust.html#rust_toolchain_rustc_prebuilt">rust_toolchain_rustc_prebuilt</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/sdk</td>
+        <td>
+        <a href="sdk.html#module_exports">module_exports</a>, <a href="sdk.html#module_exports_snapshot">module_exports_snapshot</a>, <a href="sdk.html#sdk">sdk</a>, <a href="sdk.html#sdk_snapshot">sdk_snapshot</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/sh</td>
+        <td>
+        <a href="sh.html#sh_binary">sh_binary</a>, <a href="sh.html#sh_binary_host">sh_binary_host</a>, <a href="sh.html#sh_defaults">sh_defaults</a>, <a href="sh.html#sh_test">sh_test</a>, <a href="sh.html#sh_test_host">sh_test_host</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/sysprop</td>
+        <td>
+        <a href="sysprop.html#sysprop_library">sysprop_library</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/systemfeatures</td>
+        <td>
+        <a href="systemfeatures.html#java_system_features_srcs">java_system_features_srcs</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/tradefed/suite_harness</td>
+        <td>
+        <a href="suite_harness.html#tradefed_binary_host">tradefed_binary_host</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/tradefed_modules</td>
+        <td>
+        <a href="tradefed_modules.html#test_module_config">test_module_config</a>, <a href="tradefed_modules.html#test_module_config_host">test_module_config_host</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/xml</td>
+        <td>
+        <a href="xml.html#prebuilt_etc_xml">prebuilt_etc_xml</a>
+        </td>
+      </tr>
+    
+      <tr>
+        <td>android/soong/xsdc</td>
+        <td>
+        <a href="xsdc.html#xsd_config">xsd_config</a>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+</div>
+</body>
+</html>
